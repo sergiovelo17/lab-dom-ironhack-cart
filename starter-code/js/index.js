@@ -68,6 +68,7 @@ window.onload = function(){
     let newCopy = copy.cloneNode(true);
     newCopy.querySelector(".name span").innerHTML = document.querySelector("#btn-name").value;
     newCopy.querySelector(".price span").innerHTML = document.querySelector("#btn-price").value;
+    newCopy.querySelector(".price span").innerHTML = `$${newCopy.querySelector(".price span").innerHTML}`
     newCopy.querySelector(".user-in .qty").value = 0;
     parent.appendChild(newCopy);
     newCopy.querySelector(".btn-delete").onclick = deleteItem;
